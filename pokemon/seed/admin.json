@@ -1,0 +1,182 @@
+[
+    {
+        "model": "pokemon.Types",
+        "pk": 1,
+        "fields": {
+            "type_name": "Water"
+        }
+    },
+    {
+        "model": "pokemon.Types",
+        "pk": 2,
+        "fields": {
+            "type_name": "Grass"
+        }
+    },
+    {
+        "model": "pokemon.Types",
+        "pk": 3,
+        "fields": {
+            "type_name": "Fire"
+        }
+    },
+    {
+        "model": "pokemon.Types",
+        "pk": 4,
+        "fields": {
+            "type_name": "Ground"
+        }
+    },
+    {
+        "model": "pokemon.Types",
+        "pk": 5,
+        "fields": {
+            "type_name": "Poison"
+        }
+    },
+    {
+        "model": "pokemon.Types",
+        "pk": 6,
+        "fields": {
+            "type_name": "Flying"
+        }
+    },
+    {
+        "model": "pokemon.Types",
+        "pk": 7,
+        "fields": {
+            "type_name": "Bug"
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 1,
+        "fields": {
+            "species": "Bulbasaur",
+            "types": [
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 2,
+        "fields": {
+            "species": "Ivysaur",
+            "types": [
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 3,
+        "fields": {
+            "species": "Venusaur",
+            "types": [
+                2,
+                5
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 4,
+        "fields": {
+            "species": "Charmander",
+            "types": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 5,
+        "fields": {
+            "species": "Charmeleon",
+            "types": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 6,
+        "fields": {
+            "species": "Charizard",
+            "types": [
+                3
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 7,
+        "fields": {
+            "species": "Squirtle",
+            "types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 8,
+        "fields": {
+            "species": "Wartortle",
+            "types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 9,
+        "fields": {
+            "species": "Blastoise",
+            "types": [
+                1
+            ]
+        }
+    },
+    {
+        "model": "pokemon.PokemonSpecies",
+        "pk": 10,
+        "fields": {
+            "species": "Caterpie",
+            "types": [
+                7
+            ]
+        }
+    },
+    {
+        "model": "pokemon.Pokemon",
+        "pk": 1,
+        "fields": {
+            "name": "Ming Ming",
+            "level": 1,
+            "species_name": 1
+        }
+    },
+    {
+        "model": "pokemon.Pokemon",
+        "pk": 2,
+        "fields": {
+            "name": "Sweety",
+            "level": 1,
+            "species_name": 2
+        }
+    },
+    {
+        "model": "pokemon.Trainer",
+        "pk": 1,
+        "fields": {
+            "trainer_name": "Paul",
+            "pokemon": [
+                1
+            ]
+        }
+    }
+]
