@@ -5,3 +5,4 @@
 ![Pokemon_trainer](https://user-images.githubusercontent.com/21010227/98292041-0531fa80-1fe7-11eb-9004-6021c8f8568d.PNG)
 ![Pokemon_types](https://user-images.githubusercontent.com/21010227/98292043-082ceb00-1fe7-11eb-975a-6fa430069c24.PNG)
 ![Pokemon_install](https://user-images.githubusercontent.com/21010227/98292083-14b14380-1fe7-11eb-951c-eccf8764f02f.PNG)
+![po](https://user-images.githubusercontent.com/21010227/98292616-ef710500-1fe7-11eb-8bc1-4cb33645ae16.PNG)
