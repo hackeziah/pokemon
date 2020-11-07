@@ -36,14 +36,15 @@ class Pokemon(models.Model):
         elif self.level >= self.species_name.level_evolve and self.level <= self.species_name.evolution:
             self.species_name.species_number = self.species_name.species_number + 1
             self.species_name = PokemonSpecies.objects.filter(id=self.species_name.species_number )[0]
+    
+        elif self.level < self.species_name.level_evolve:
+            self.species_name.species_number = self.species_name.species_number - 1
+            self.species_name = PokemonSpecies.objects.filter(id=self.species_name.species_number )[0]
+
 
         if self.level == self.species_name.evolution:
             self.species_name.species_number = self.species_name.species_number + 1
             self.species_name = PokemonSpecies.objects.filter(id=self.species_name.species_number )[0]
-
-        #elif self.level < self.species_name.evolution or self.level >= self.species_name.level_evolve:
-         #   self.species_name.species_number = self.species_name.species_number - 1
-          #  self.species_name = PokemonSpecies.objects.filter(id=self.species_name.species_number )[0]
 
 
         # elif self.level == self.species_name.evolution :
