@@ -27,24 +27,21 @@ class Pokemon(models.Model):
 
     def save(self, *args, **kwargs):
 
-        if self.level <= self.species_name.level_evolve or self.level == self.species_name.level_evolve:
-            self.species_name = self.species_name
-
         if self.level > self.species_name.evolution:#new evolution
-            self.species_name =  PokemonSpecies.objects.filter(id= self.species_name.new_species)[0]
+            self.species_name =  PokemonSpecies.objects.filter(species_number= self.species_name.new_species)[0]
             self.level = 1
-        elif self.level >= self.species_name.level_evolve and self.level <= self.species_name.evolution:
-            self.species_name.species_number = self.species_name.species_number + 1
-            self.species_name = PokemonSpecies.objects.filter(id=self.species_name.species_number )[0]
-    
-       # elif self.level < self.species_name.level_evolve:
-        #    self.species_name.species_number = self.species_name.species_number - 1
-         #   self.species_name = PokemonSpecies.objects.filter(id=self.species_name.species_number )[0]
 
+        if self.level % self.species_name.level_evolve == 0 or self.level >= self.species_name.level_evolve :
+            a = self.species_name.species_number + 1
+            self.species_name = PokemonSpecies.objects.filter(species_number= a )[0]
 
-        if self.level == self.species_name.evolution:
-            self.species_name.species_number = self.species_name.species_number + 1
-            self.species_name = PokemonSpecies.objects.filter(id=self.species_name.species_number )[0]
+        else:
+            self.species_name = self.species_name
+            
+        if self.level == self.species_name.evolution:#advance 
+            a = self.species_name.new_species - 1
+            self.species_name = PokemonSpecies.objects.filter(species_number=a)[0]
+
 
 
         # elif self.level == self.species_name.evolution :
